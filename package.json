@@ -3,9 +3,12 @@
   "version": "0.1.0",
   "private": true,
   "devDependencies": {
+    "enzyme": "^2.8.2",
+    "react-addons-test-utils": "^15.6.0",
     "react-scripts": "1.0.7"
   },
   "dependencies": {
+    "prop-types": "^15.5.10",
     "react": "^15.6.1",
     "react-dom": "^15.6.1"
   },
