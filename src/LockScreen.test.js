@@ -1,11 +1,11 @@
+import { mount } from "enzyme";
 /**
  * Created by Mihail on 6/18/2017.
  */
-import React from "react"
-import { mount } from "enzyme"
-import LockScreen from "./LockScreen"
-import ClockDisplay from './ClockDisplay'
-import SlideToUnlock from './SlideToUnlock'
+import React from "react";
+import ClockDisplay from "./ClockDisplay";
+import LockScreen from "./LockScreen";
+import SlideToUnlock from "./SlideToUnlock";
 
 describe("LockScreen", () => {
   let props

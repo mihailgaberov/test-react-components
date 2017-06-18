@@ -1,8 +1,8 @@
+import PropTypes from "prop-types";
 /**
  * Created by Mihail on 6/18/2017.
  */
-import React from 'react'
-import PropTypes from 'prop-types'
+import React from "react";
 
 export default class TopOverlay extends React.Component {
   render() {

@@ -1,8 +1,8 @@
 /**
  * Created by Mihail on 6/18/2017.
  */
-import React from "react"
-import LockScreen from "./LockScreen"
+import React from "react";
+import LockScreen from "./LockScreen";
 
 export default class App extends React.Component {
   render() {

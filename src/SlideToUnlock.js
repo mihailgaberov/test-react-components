@@ -1,8 +1,8 @@
+import PropTypes from "prop-types";
 /**
  * Created by Mihail on 6/18/2017.
  */
-import React from 'react'
-import PropTypes from 'prop-types'
+import React from "react";
 
 export class SlideArrow extends React.Component {
 
@@ -22,14 +22,16 @@ export class SlideArrow extends React.Component {
 
   handleUp = () => {
     this.removeDownListeners()
-    this.setState({ held: false })
+    this.setState({held: false})
     this.holdOffset = null
 
     // Wait a tick before setting holdPosition so that
     // transition gets set, so that we slide back into
     // place slowly instead of instantly
     setTimeout(() => {
-      if (!this._isMounted) { return }
+      if (!this._isMounted) {
+        return
+      }
       this.setState({
         holdPosition: 0,
       })
@@ -40,7 +42,9 @@ export class SlideArrow extends React.Component {
     const clientX = event.clientX || event.touches[0].clientX
     const holdPosition = clientX - this.rect.left - this.holdOffset
 
-    if (holdPosition < 0) { return }
+    if (holdPosition < 0) {
+      return
+    }
     if (holdPosition + this.rect.width > this.props.triggerXPosition) {
       if (this.props.onReachedTriggerPosition) {
         this.props.onReachedTriggerPosition()
@@ -49,7 +53,7 @@ export class SlideArrow extends React.Component {
       return
     }
 
-    this.setState({ holdPosition })
+    this.setState({holdPosition})
 
     if (this.props.onPositionChanged) {
       this.props.onPositionChanged(holdPosition)
@@ -142,15 +146,17 @@ export default class SlideToUnlock extends React.Component {
   }
 
   calculateTriggerXPosition = () => {
-    if (!this.arrowHolder) { return }
+    if (!this.arrowHolder) {
+      return
+    }
     this.setState({
       triggerXPosition: this.arrowHolder.getBoundingClientRect().width,
     })
   }
 
   render() {
-    const { onSlide } = this.props
-    const { triggerXPosition } = this.state
+    const {onSlide} = this.props
+    const {triggerXPosition} = this.state
 
     return (
       <div

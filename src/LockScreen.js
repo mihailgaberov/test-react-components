@@ -1,11 +1,11 @@
+import PropTypes from "prop-types";
 /**
  * Created by Mihail on 6/18/2017.
  */
-import React from "react"
-import ClockDisplay from "./ClockDisplay"
-import TopOverlay from "./TopOverlay"
-import SlideToUnlock from "./SlideToUnlock"
-import PropTypes from 'prop-types'
+import React from "react";
+import ClockDisplay from "./ClockDisplay";
+import SlideToUnlock from "./SlideToUnlock";
+import TopOverlay from "./TopOverlay";
 
 export default class LockScreen extends React.Component {
   render() {
@@ -40,7 +40,7 @@ export default class LockScreen extends React.Component {
             {userInfoMessage}
           </TopOverlay>
         ) : null}
-        <SlideToUnlock onSlide={onUnlocked} />
+        <SlideToUnlock onSlide={onUnlocked}/>
       </div>
     )
   }

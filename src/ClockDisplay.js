@@ -1,7 +1,7 @@
 /**
  * Created by Mihail on 6/18/2017.
  */
-import React from "react"
+import React from "react";
 
 export default class ClockDisplay extends React.Component {
   state = {
@@ -9,7 +9,7 @@ export default class ClockDisplay extends React.Component {
   }
 
   updateTime = () => {
-    this.setState({ now: new Date() })
+    this.setState({now: new Date()})
   }
 
   componentDidMount() {
@@ -21,7 +21,7 @@ export default class ClockDisplay extends React.Component {
   }
 
   render() {
-    const { now } = this.state
+    const {now} = this.state
 
     return (
       <div
